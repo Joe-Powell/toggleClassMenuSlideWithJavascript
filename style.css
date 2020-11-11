@@ -1,0 +1,76 @@
+/* in here we make the animation fire by adding a class with javascript methods such as classList.contains, classList.remove classList.add in javascript
+    these classes below are added in a click event otherwise they dont existin the html
+*/
+
+
+
+
+* {
+    font-family: sans-serif;
+    margin:0;
+    padding:0;
+
+}
+
+.toggleButton {
+    position:fixed;
+    z-index: 2;
+ }
+
+
+ /* Innitially make this so it is top -120px */
+.navBar {
+    position: relative;
+    top: -120px;
+    width: 100vw;
+    background-color: #333; 
+    text-align: center;
+    margin:0px;
+ }
+ 
+ .navBar ul li {
+  list-style: none;
+  padding: 5px;
+ 
+ }
+ 
+
+ 
+ 
+ /* this class will be added when you click on the X, it dont exist innitially  */
+ .slideToggleDown {
+ 
+ position: relative;
+ animation-name: toggleDown;
+ animation-duration:3s;
+ animation-fill-mode: forwards;
+ 
+ 
+ }
+ 
+ @keyframes toggleDown {
+ 
+     0% {top: -120px;}
+     100% {top: 0px;}
+    
+    }
+ 
+ 
+ 
+ 
+ .slideToggleUp {
+    position: relative;
+     animation-name: toggleUp;
+     animation-duration:5s;
+     animation-fill-mode: forwards;
+ 
+ 
+ }
+ 
+ @keyframes toggleUp {
+ 
+     0% {top: 0px;}
+     100% {top: -120px;} 
+    
+    }
+ 
